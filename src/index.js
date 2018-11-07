@@ -1,19 +1,13 @@
-function updateDisplay() {
-  const display = document.querySelector(".calculator-screen");
+function solveExpression(){
+  var vyraz = document.getElementById("priklad").value;
+  document.getElementById("vysledek").innerHTML = "Vysledek je: " + priklad;
 }
 
-updateDisplay();
+var input = document.getElementById("priklad");
 
-const performCalculation = {
-  "/": (firstOperand, secondOperand) => firstOperand / secondOperand,
-
-  "*": (firstOperand, secondOperand) => firstOperand * secondOperand,
-
-  "+": (firstOperand, secondOperand) => firstOperand + secondOperand,
-
-  "-": (firstOperand, secondOperand) => firstOperand - secondOperand,
-
-  "=": (firstOperand, secondOperand) => secondOperand
-};
-
-updateDisplay();
+input.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if(event.keyCode == 13){
+    solveExpression();
+  }
+});
