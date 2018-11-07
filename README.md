@@ -1,2 +1,0 @@
-# OnlineCalculator
-Created with CodeSandbox
